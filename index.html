@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathi Babu Interiors</title>
+    <link rel="stylesheet" href="interiors.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Sathi Babu Interiors Logo">
+        </div>
+        <div class="title">
+            <h1>SATHI BABU INTERIORS</h1>
+            <div class="quote">
+                <p>Dream big in your budget</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#video">Videos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2 >What we offer</h2>
+            <div class="services">
+                <div class="services-text">
+                   <h3>WE DO ALL TYPES OF INTERIOR WORKS</h3>
+            <ul>
+                <br><li>We design as per your budget.</li>
+                <br><li>We use IS 710, BWP grade Gurjan waterproof plywood sheets</li>
+                <br><li>We use branded laminations like Advance,Virgo,GreenLam High Glossy material etc.</li>
+                <br><li>We use PVC and Acrylic as you like</li>
+                <br><li>We complete the projects in Minimal time with Nominal price</li><br><br>
+            </ul>
+                </div>
+                <div class="services-image">
+                    <img src="https://www.decorpot.com/images/425508365modern-home-interior-design-ideas.jpg" alt="services Image">
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-images">
+                    <img src="https://www.decorpot.com/images/425508365modern-home-interior-design-ideas.jpg"
+                        alt="Gallery Image 1">
+                    <img src="image2.jpg" alt="Gallery Image 2">
+                    <img src="image3.jpg" alt="Gallery Image 3">
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+
+        <section id="video">
+            <h2>Video Clips</h2>
+            <div class="video">
+                <video width="320" height="240" autoplay muted>
+                    <source src="chinnaAnnayyaHome.mp4" type="video/mp4">
+                    
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+        </section>
+    </main>
+    <div class="container">
+        <h2>Get Free Quote</h2>
+        <button id="quoteBtn">Get Free Quote</button>
+        <form id="quoteForm" style="display: none;">
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="flatType">Flat Type:</label>
+                <select id="flatType" name="flatType">
+                    <option value="1bhk">1 BHK</option>
+                    <option value="2bhk">2 BHK</option>
+                    <option value="3bhk">3 BHK</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="contact">
+            <button onclick="callMe()">Call Me</button>
+            <button onclick="sendEmail()">Email</button>
+            <button onclick="sendWhatsApp()">WhatsApp</button>
+        </div>
+        <p>&copy; 2024 Sathi Babu Interiors. All rights reserved.</p>
+    </footer>
+    <script>
+
+        document.getElementById("quoteBtn").addEventListener("click", function() {
+        document.getElementById("quoteForm").style.display = "block";
+    });
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.gallery-images img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(${-100 * slideIndex}%)`;
+            }
+        }
+
+        function prevSlide() {
+            if (slideIndex === 0) {
+                slideIndex = document.querySelectorAll('.gallery-images img').length - 1;
+            } else {
+                slideIndex--;
+            }
+            showSlides();
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex === document.querySelectorAll('.gallery-images img').length) {
+                slideIndex = 0;
+            }
+            showSlides();
+        }
+
+        showSlides();
+
+        function callMe() {
+            window.location.href = 'tel:+919110758038'; // Replace with your phone number
+        }
+
+        function sendEmail() {
+            window.location.href = 'mailto:sathibabuinteriors@gmail.com'; // Replace with your email address
+        }
+
+        function sendWhatsApp() {
+            window.location.href = 'https://wa.me/+919110758038'; // Replace with your WhatsApp number
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>
