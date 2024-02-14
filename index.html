@@ -84,6 +84,10 @@
                 <input type="text" id="mobile" name="mobile" required>
             </div>
             <div class="form-group">
+                <label for="email">Email Id:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
@@ -155,10 +159,10 @@
         function sendEmail(){
             Email.send({
                     Host : "smtp.gmail.com",
-                    Username : "kedasureception@gmail.com",
-                    Password : "Kedasu@123",
+                    Username : "prasadpspk190@gmail.com",
+                    Password : "Prasad@082627",
                     To : 'prasadpspk248@gmail.com',
-                    From : document.getElementById(mobile).value,
+                    From : document.getElementById(email).value,
                     Subject : "New Customer enquiry",
                     Body : "THis is the body"
                 }).then(
