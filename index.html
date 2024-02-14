@@ -80,24 +80,16 @@
         <h2>Get Free Quote</h2>
         <form onsubmit="sendEmail(); reset(); return false;" id="quoteForm" >
             <div class="form-group">
-                <label for="mobile">Mobile Number:</label>
-                <input type="text" id="mobile" name="mobile" required>
+                <input type="text" id="phone" name="mobile" placeholder="Phone number" required>
             </div>
             <div class="form-group">
-                <label for="email">Email Id:</label>
-                <input type="text" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Email Id" required>
             </div>
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Enter name" required>
             </div>
             <div class="form-group">
-                <label for="flatType">Flat Type:</label>
-                <select id="flatType" name="flatType">
-                    <option value="1bhk">1 BHK</option>
-                    <option value="2bhk">2 BHK</option>
-                    <option value="3bhk">3 BHK</option>
-                </select>
+                <textarea id="message" rows="1" name="flattype" placeholder="Flat type" ></textarea>
             </div>
             <div class="form-group">
                 <button type="submit">Send</button>
@@ -158,25 +150,20 @@
         }
         function sendEmail(){
             Email.send({
-                    Host : "smtp.gmail.com",
-                    Username : "prasadpspk190@gmail.com",
-                    Password : "Prasad@082627",
-                    To : 'prasadpspk248@gmail.com',
-                    From : document.getElementById(email).value,
-                    Subject : "New Customer enquiry",
-                    Body : "THis is the body"
-                }).then(
-                  message => alert(message)
-                );
+                Host : "smtp.elasticemail.com",
+                Username : "prasadbellamkonda26@gmail.com",
+                Password : "445FC21C15D1940740C56F9496C9E85B435A",
+                To : 'prasadpspk190@gmail.com',
+                From : 'prasadbellamkonda26@gmail.com',
+                Subject : "New enquiry",
+                Body : "Name : "+ document.getElementById("name").value +"<br> Email : " +document.getElementById("email").value +"<br> Phone Num: " +document.getElementById("phone").value +"<br> Message: " +document.getElementById("message").value
+            }).then(
+              message => alert("message sent successfully")
+            );
         }
         
     </script>
 
-
-
-</body>
-
-</html>
 
 
 </body>
