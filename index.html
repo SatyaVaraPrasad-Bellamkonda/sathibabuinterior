@@ -78,8 +78,7 @@
     </main>
     <div class="container">
         <h2>Get Free Quote</h2>
-        <button id="quoteBtn">Get Free Quote</button>
-        <form onsubmit="sendEmail(); reset(); return false;" id="quoteForm" style="display: none;">
+        <form onsubmit="sendEmail(); reset(); return false;" id="quoteForm" >
             <div class="form-group">
                 <label for="mobile">Mobile Number:</label>
                 <input type="text" id="mobile" name="mobile" required>
@@ -113,9 +112,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
 
-        document.getElementById("quoteBtn").addEventListener("click", function() {
-        document.getElementById("quoteForm").style.display = "block";
-    });
+       
         let slideIndex = 0;
 
         function showSlides() {
@@ -158,7 +155,7 @@
         function sendEmail(){
             Email.send({
                     Host : "smtp.gmail.com",
-                    Username : "kedasuwedding@gmail.com",
+                    Username : "kedasureception@gmail.com",
                     Password : "Kedasu@123",
                     To : 'prasadpspk248@gmail.com',
                     From : document.getElementById(mobile).value,
