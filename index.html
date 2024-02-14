@@ -79,7 +79,7 @@
     <div class="container">
         <h2>Get Free Quote</h2>
         <button id="quoteBtn">Get Free Quote</button>
-        <form id="quoteForm" style="display: none;">
+        <form onsubmit="sendEmail(); reset(); return false;" id="quoteForm" style="display: none;">
             <div class="form-group">
                 <label for="mobile">Mobile Number:</label>
                 <input type="text" id="mobile" name="mobile" required>
@@ -110,6 +110,7 @@
         </div>
         <p>&copy; 2024 Sathi Babu Interiors. All rights reserved.</p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
 
         document.getElementById("quoteBtn").addEventListener("click", function() {
@@ -154,6 +155,20 @@
         function sendWhatsApp() {
             window.location.href = 'https://wa.me/+919110758038'; // Replace with your WhatsApp number
         }
+        function sendEmail(){
+            Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "kedasuwedding@gmail.com",
+                    Password : "Kedasu@123",
+                    To : 'prasadpspk248@gmail.com.com',
+                    From : document.getElementById(mobile).value,
+                    Subject : "New Customer enquiry",
+                    Body : "THis is the body"
+                }).then(
+                  message => alert(message)
+                );
+        }
+        
     </script>
 
 
