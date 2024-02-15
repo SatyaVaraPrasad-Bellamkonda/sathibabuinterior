@@ -83,7 +83,7 @@
         <h2>Get Free Quote</h2>
         <form onsubmit="sendEmail(); reset(); return false;" id="quoteForm" >
             <div class="form-group">
-                <input type="text" id="phone" name="mobile" placeholder="Phone number" required>
+                <input type="tel" id="phone" name="mobile" placeholder="Phone number" pattern="[6-9]{1}[0-9]{9}" oninvalid="setCustomValidity('Enter Valid Mobile Number')" required>
             </div>
             <div class="form-group">
                 <input type="email" id="email" name="email" placeholder="Email Id" required>
