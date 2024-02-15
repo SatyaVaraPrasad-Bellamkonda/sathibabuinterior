@@ -1,3 +1,6 @@
+/* Reset CSS */
+
+
 body {
     font-family: Arial, sans-serif;
 
@@ -62,23 +65,22 @@ main {
 .services {
     display: flex;
     justify-content: space-between;
-    /* To push items to the sides */
     align-items: center;
-    /* Vertically center items */
+    
 }
 
 .services-text {
     flex: 1;
-    /* To make it take up remaining space */
     padding: 20px;
 }
 
 .services-image {
     /*flex: 1;*/
     /*padding: 20px;*/
-    width: 500px;
-    height: 300px;
+    width: 250px;
+    height: auto;
     overflow: hidden;
+    padding:70px;
 }
 .services-image img{
     width:100%;
@@ -97,11 +99,13 @@ main {
 }
 
 .container {
+    background-color: aliceblue;
     max-width: 800px;
     margin: 10px auto;
     padding: 30px ;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align:center;
 }
 
 input {
@@ -114,7 +118,7 @@ input {
 }
 
 input[type="text"],input[type="email"],
-textarea {
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -128,6 +132,7 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 button[type="submit"]:hover {
@@ -141,6 +146,7 @@ section {
 .gallery {
     position: relative;
     overflow: hidden;
+    
 }
 
 .gallery-images {
@@ -193,6 +199,17 @@ section {
 }
 .contact{
     text-align: center;
+}
+.contact button{
+    background-color: rgb(112, 207, 88);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact button:hover{
+    background-color:rgb(64, 227, 23);
 }
 footer p{
     text-align:center;
