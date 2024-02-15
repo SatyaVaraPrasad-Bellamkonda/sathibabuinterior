@@ -117,8 +117,7 @@ input {
     font-weight: bold;
 }
 
-input[type="text"],input[type="email"],input["tel"],
-select {
+input[type="text"],input[type="tel"],input[type="email"] ,select{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
