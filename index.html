@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sathi Babu Interiors</title>
     <link rel="stylesheet" href="interiors.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
 </head>
 
 <body>
@@ -57,7 +55,7 @@
             <h2>Gallery</h2>
             <div class="gallery">
                 <div class="gallery-images">
-                    <img src="https://www.decorpot.com/images/425508365modern-home-interior-design-ideas.jpg"
+                    <img src="IMG_20231123_132719.jpg"
                         alt="Gallery Image 1">
                     <img src="https://cdn.decorilla.com/online-decorating/wp-content/uploads/2018/10/modern-living-room-neutral-walls.jpg" alt="Gallery Image 2">
                     <img src="https://static.zingyhomes.com/projectImages/user_14025/KITCHEN.jpg" alt="Gallery Image 3">
@@ -71,6 +69,8 @@
         <section id="video">
             <h2>Video Clips</h2>
             <div class="video">
+                
+                
                     <iframe width="656" height="369" src="https://www.youtube.com/embed/4yxr322owNc" title="Interior Design Ad Video Template (Editable)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </video>
             </div>
@@ -89,11 +89,7 @@
                 <input type="text" id="name" name="name" placeholder="Enter name" required>
             </div>
             <div class="form-group">
-                    <select id="message" name="flatType">
-                        <option value="1bhk">1 BHK</option>
-                        <option value="2bhk">2 BHK</option>
-                        <option value="3bhk">3 BHK</option>
-                      </select>
+                <textarea id="message" rows="1" name="flattype" placeholder="Flat type" ></textarea>
             </div>
             <div class="form-group">
                 <button type="submit">Send</button>
@@ -103,9 +99,9 @@
 
     <footer>
         <div class="contact">
-            <button onclick="callMe()">Call Us <i class='fas fa-phone' style=' transform: scaleX(-1);'></i></button>
-            <button onclick="sendEmail()">Email <i class="fa fa-envelope" aria-hidden="true"></i></button>
-            <button onclick="sendWhatsApp()">WhatsApp <i class="fa fa-whatsapp"></i></button>
+            <button onclick="callMe()">Call Me</button>
+            <button onclick="sendEmail()">Email</button>
+            <button onclick="sendWhatsApp()">WhatsApp</button>
         </div>
         <p>&copy; 2024 Sathi Babu Interiors. All rights reserved.</p>
     </footer>
@@ -160,7 +156,7 @@
                 To : 'prasadpspk190@gmail.com',
                 From : 'prasadbellamkonda26@gmail.com',
                 Subject : "New enquiry",
-                Body : "Name : "+ document.getElementById("name").value +"<br> Email : " +document.getElementById("email").value +"<br> Phone Num: " +document.getElementById("phone").value +"<br> Message: " +document.getElementById("message").options[document.getElementById("flatType").selectedIndex].text
+                Body : "Name : "+ document.getElementById("name").value +"<br> Email : " +document.getElementById("email").value +"<br> Phone Num: " +document.getElementById("phone").value +"<br> Message: " +document.getElementById("message").value
             }).then(
               message => alert("message sent successfully")
             );
