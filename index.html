@@ -89,7 +89,12 @@
                 <input type="text" id="name" name="name" placeholder="Enter name" required>
             </div>
             <div class="form-group">
-                <textarea id="message" rows="1" name="flattype" placeholder="Flat type" ></textarea>
+               
+                 <select id="message" name="flatType">
+                        <option value="1bhk">1 BHK</option>
+                        <option value="2bhk">2 BHK</option>
+                        <option value="3bhk">3 BHK</option>
+                </select>
             </div>
             <div class="form-group">
                 <button type="submit">Send</button>
@@ -156,7 +161,7 @@
                 To : 'prasadpspk190@gmail.com',
                 From : 'prasadbellamkonda26@gmail.com',
                 Subject : "New enquiry",
-                Body : "Name : "+ document.getElementById("name").value +"<br> Email : " +document.getElementById("email").value +"<br> Phone Num: " +document.getElementById("phone").value +"<br> Message: " +document.getElementById("message").value
+                Body : "Name : "+ document.getElementById("name").value +"<br> Email : " +document.getElementById("email").value +"<br> Phone Num: " +document.getElementById("phone").value +"<br> Message: " + document.getElementById("message").options[document.getElementById("message").selectedIndex].text
             }).then(
               message => alert("message sent successfully")
             );
