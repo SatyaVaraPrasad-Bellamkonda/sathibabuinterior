@@ -77,7 +77,6 @@ main {
     flex: 1;
     /* To make it take up remaining space */
     padding: 20px;
-    height: 200px;
 }
 
 #home {
